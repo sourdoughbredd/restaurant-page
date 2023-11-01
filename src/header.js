@@ -11,10 +11,10 @@ function getHeader() {
         </div>
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Menu</a></li>
-                <li><a href="">Hours</a></li>
-                <li><a href="">Contact</a></li>
+                <li>Home</li>
+                <li>Menu</li>
+                <li>Hours</li>
+                <li>Contact</li>
             </ul>
         </nav>
     `;
