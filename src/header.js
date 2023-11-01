@@ -1,9 +1,8 @@
 import Logo from "./bbq-icon.png";
-export { getHeader };
+export { loadHeader };
 
-function getHeader() {
-    const header = document.createElement("div");
-    header.classList.add("header");
+function loadHeader() {
+    const header = document.querySelector("header");
     header.innerHTML = `
         <div class="logo">
             <img src=${Logo} alt="Icon of a bbq grill">
@@ -18,6 +17,4 @@ function getHeader() {
             </ul>
         </nav>
     `;
-
-    return header;
 };
