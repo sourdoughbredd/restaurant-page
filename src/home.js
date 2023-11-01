@@ -1,13 +1,10 @@
 // Home Page Loader
 import Logo from "./bbq-icon.png";
-import { getHeader } from "./header";
-export { loadHomePage };
+export { loadHome };
 
-function loadHomePage() {
-    // Header
-    const content = document.getElementById("content");
-    content.appendChild(getHeader());
+function loadHome() {
     // Main
+    const content = document.querySelector("#content");
     const main = document.createElement("div");
     main.classList.add("main");
     main.innerHTML = `

@@ -1,13 +1,7 @@
 // Hours Page
-import Logo from "./bbq-icon.png";
-import { getHeader } from "./header";
-export { loadHoursPage };
+export { loadHours };
 
-function loadHoursPage() {
-    // Header
-    const content = document.getElementById("content");
-    content.appendChild(getHeader());
-
+function loadHours() {
     // Main
     const main = document.createElement("div");
     main.classList.add("main");
