@@ -4,12 +4,14 @@ import { getHeader } from "./header";
 export { loadHomePage };
 
 function loadHomePage() {
+    // Header
     const content = document.getElementById("content");
     content.appendChild(getHeader());
+    // Main
     const main = document.createElement("div");
     main.classList.add("main");
     main.innerHTML = `
-        <div class="container">
+        <div class="home-container">
             <div class="logo">
             <img src=${Logo} alt="Icon of a bbq grill">
             <span>Backyard BBQ</span>
@@ -20,5 +22,6 @@ function loadHomePage() {
             </div>
         </div>
     `;
+
     content.appendChild(main);
 }
