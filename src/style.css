@@ -19,14 +19,6 @@ li {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:visited {
-  color: inherit;
-}
-
 
 /* Shared Header & Logo Styling */
 
@@ -63,6 +55,10 @@ nav ul {
   display: flex;
   gap: 50px;
   font-size: 26px;
+}
+
+nav li {
+  cursor: pointer;
 }
 
 /* Shared Main Content */
