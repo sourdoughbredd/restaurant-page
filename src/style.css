@@ -8,6 +8,9 @@ body {
   margin: 0;
   padding: 0;
   color: rgb(244, 235, 235);
+  background-color: rgb(29, 29, 29);
+  width: 100vw;
+  height: 100vh;
 }
 
 h2 {
@@ -19,13 +22,20 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
 
 /* Shared Header & Logo Styling */
 
 header {
-  background-color: rgb(29, 29, 29);
   box-sizing: border-box;
-  height: 10vh;
+  height: 10%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -61,15 +71,19 @@ nav li {
   cursor: pointer;
 }
 
+
 /* Shared Main Content */
+
+#content {
+  height: 87%;
+}
 
 .main {
   box-sizing: border-box;
   background-image: url('./bbq-image.jpg');
   background-size: cover;
   background-position: center;
-  width: 100vw;
-  height: 90vh;
+  height: 100%;
   padding: 64px;
   display: grid;
   place-items: center;
@@ -134,4 +148,28 @@ nav li {
 
 #hours-table tr:nth-child(n + 2) {
   margin-top: 10px;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background-color: inherit;
+  height: 3%;
+}
+
+/* Copyright with github */
+footer div {
+  display: flex;
+  align-items: center;
+}
+
+#github-logo {
+  height: auto;
+  width: 20px;
+  margin-left: 6px;
+  filter: invert(1);
 }
