@@ -3,6 +3,7 @@ import { loadHeader } from "./header";
 import { loadFooter } from "./footer";
 import { loadHome } from "./home";
 import { loadHours } from "./hours";
+import { loadMenu } from "./menu";
 
 loadHeader();
 loadFooter();
@@ -26,4 +27,11 @@ hoursBtn.addEventListener("click", () => {
     content.innerHTML = "";
     // Load hours page
     loadHours();
-})
+});
+
+menuBtn.addEventListener("click", () => {
+    // Clear main content
+    content.innerHTML = "";
+    // Load hours page
+    loadMenu();
+});
