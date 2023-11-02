@@ -1,9 +1,11 @@
 import "./style.css";
 import { loadHeader } from "./header";
-import { loadHome } from "./home.js";
-import { loadHours } from "./hours.js";
+import { loadFooter } from "./footer";
+import { loadHome } from "./home";
+import { loadHours } from "./hours";
 
 loadHeader();
+loadFooter();
 loadHome();
 
 const content = document.querySelector("#content");
