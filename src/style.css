@@ -13,7 +13,7 @@ body {
   height: 100vh;
 }
 
-h2 {
+h2, h3 {
   padding: 0;
   margin: 0;
 }
@@ -90,7 +90,8 @@ nav li {
 }
 
 .home-container,
-.hours-container {
+.hours-container,
+.menu-container {
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.497);
   padding: 90px;
@@ -99,7 +100,7 @@ nav li {
 
  /* Home Page */
 
-.main .home-container {
+.home-container {
   display: flex;
   align-items: center;
   gap: 60px;
@@ -149,6 +150,56 @@ nav li {
 #hours-table tr:nth-child(n + 2) {
   margin-top: 10px;
 }
+
+
+/* Menu Page */
+
+.menu-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(1fr, 4);
+  justify-items: center;
+  align-items: start;
+  gap: 40px;
+  padding: 48px;
+  font-size: 20px;
+  text-wrap: nowrap;
+}
+
+.menu-container > h2 {
+  grid-row: 1;
+  grid-column: 1 / -1;
+  font-size: 44px;
+  font-family: "Permanent Marker", cursive;
+}
+
+#beer {
+  grid-column: 1 / -1;
+}
+
+.menu-section > h3 {
+  font-size: 30px;
+  font-family: "Permanent Marker", cursive;
+  text-align: center;
+}
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+  padding-top: 6px;
+}
+
+#beer-price {
+  display: flex;
+  gap: 24px;
+}
+
+#beer .item-info {
+  justify-content: center;
+}
+
+
 
 /* Footer */
 
