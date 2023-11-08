@@ -115,6 +115,8 @@ nav li {
   align-items: center;
   gap: 60px;
   width: 80%;
+  min-width: 1040px;
+  max-height: 560px;
 }
 
 .home-container .logo img {
