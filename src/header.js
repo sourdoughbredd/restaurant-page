@@ -13,7 +13,6 @@ function loadHeader() {
                 <li id="home-link">Home</li>
                 <li id="menu-link">Menu</li>
                 <li id="hours-link">Hours</li>
-                <li id="contact-link">Contact</li>
             </ul>
         </nav>
     `;
