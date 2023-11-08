@@ -25,7 +25,7 @@ function getMenuItems() {
 
     ];
     const Turkey = [
-        createMenuItem('Leg', '$10/leach'),
+        createMenuItem('Leg', '$10/each'),
         createMenuItem('Breast', 'No'),
     ];
     const Beer = [
@@ -39,6 +39,10 @@ function getMenuItems() {
 // Function that loads the menu to the page
 function loadMenu() {
     const content = document.querySelector("#content");
+
+    // Create main container to match other pages
+    const mainContainer = document.createElement("div");
+    mainContainer.classList.add('main');
     
     //  Create menu container
     const menuContainer = document.createElement("div");
@@ -61,31 +65,41 @@ function loadMenu() {
         // Add section title
         sectionDiv.innerHTML = `<h3>${section}</h3>`;
 
-        // Create div to hold name and price of each item
-        const itemDiv = document.createElement("div");
-        itemDiv.classList.add("item-info");
-
         // Add section menu items
         if (section === "Beer") {
+
             //Add universal beer prices text
-            itemDiv.innerHTML = `
+            sectionDiv.innerHTML += `
                 <div id="beer-price">(
                     <span>Can : $4</span>
                     <span>Bottle : $4.5</span>
                     <span>Draft : $5</span>
                 )</div>
             `;
-            // Add item (beer) names
+
+            // Add beer names
             menuItems[section].forEach(item => {
+
+                // Create div to hold name of each beer
+                const itemDiv = document.createElement("div");
+                itemDiv.classList.add("item-info");
                 itemDiv.innerHTML += `
-                <div class="item-name">${item.name}</div>
-                `
+                    <div class="item-name">${item.name}</div>
+                `;
+                // Append item to the section
+                sectionDiv.appendChild(itemDiv);
             });
             
-            // Append item to the section
-            sectionDiv.appendChild(itemDiv);
+
         } else {
+            // Section other than Beer section
+
             menuItems[section].forEach(item => {
+
+                // Create div to hold name and price of each item
+                const itemDiv = document.createElement("div");
+                itemDiv.classList.add("item-info");
+
                 // Add item name and price elements
                 itemDiv.innerHTML = `
                     <div class="item-name">${item.name}</div>
@@ -102,6 +116,7 @@ function loadMenu() {
     });
     
     // Append menu to the page
-    content.appendChild(menuContainer);
+    mainContainer.appendChild(menuContainer);
+    content.appendChild(mainContainer);
 } 
 
